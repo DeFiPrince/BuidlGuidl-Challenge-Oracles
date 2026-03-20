@@ -39,7 +39,7 @@ contract WhitelistOracle {
      * @dev Currently disabled to make it easy for you to impersonate the owner
      */
     modifier onlyOwner() {
-        // if (msg.sender != owner) revert OnlyOwner();
+        if (msg.sender != owner) revert OnlyOwner();
         _;
     }
 
